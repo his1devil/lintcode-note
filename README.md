@@ -1,0 +1,2 @@
+# lintcode-note
+Accepted !
