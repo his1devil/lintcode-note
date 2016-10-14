@@ -1,6 +1,8 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import collections
+
 """
 两个字符串是变位词
 写出一个函数 anagram(s, t) 去判断两个字符串是否是颠倒字母顺序构成的
@@ -31,3 +33,12 @@ class Solution:
             except KeyError:
                 d[item] = 1
         return d
+
+    def anagramUpgrade(self, s, t):
+        """
+         hashmap 统计字频
+        """
+        return collections.Counter(s) == collections.Counter(t)
+
+    def anagramSort(self, s, t):
+        return sorted(s) == sorted(t)
